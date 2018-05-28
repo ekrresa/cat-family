@@ -55,7 +55,8 @@ function findCat (arg) {
 		}
 	}
 	if (present === false) {
-		alert(`Awww!!! ${arg} does not belong to the Cat Family!!!`);
+		alert(`Awww!!! ${arg} does not belong to the Cat Family!!!
+			Please try again!`);
 		gallery.style.boxShadow = 'none';
 	}
 
