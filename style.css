@@ -1,0 +1,96 @@
+body {
+	margin: 0;
+	padding: 0 34px;
+	font-family: cursive, "Arial", sans-serif;
+	height: 97vh;
+    background-image: url('img/nature.jpg');
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    color: #222708;
+	text-align: center;
+	font-size: 30px;
+    margin-bottom: 11px;
+    margin-top: 10px;
+}
+
+input {
+    text-align: center;
+    width: 130px;
+    height: 25px;
+    border-radius: 3px;
+    margin-bottom: 0.625em;
+}
+
+input:focus {
+    border-style: double;
+    border-color: #15403e;
+    outline-style: none;
+}
+
+h4 {
+    margin-top: 0.625em;
+    font-size: 1.25em;
+    margin-bottom: 0.625em;
+}
+
+button {
+    width: 75px;
+    height: 40px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+    justify-content: center;
+}
+
+.panel {
+	height: 14.375em;
+    width: 20%;
+    color: #222708;
+    background-color: whitesmoke;
+    opacity: 0.8;
+    border-radius: 7px;
+    border: 2px solid;
+    padding-left: 7px;
+    padding-right: 7px;
+    text-align: center;
+}
+
+.gallery {
+	height: 31.250em;
+    width: 50%;
+    margin-left: 100px;
+    border-radius: 7px;
+    box-shadow: 5px 10px 18px #000000;
+    padding: 0;
+    opacity: 0;
+}
+
+.gallery > img {
+	width: 100%;
+    height: 100%;
+    border-radius: 7px;
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 2s;
+    animation-name: fade;
+    animation-duration: 2s;
+}
+
+
+@-webkit-keyframes fade {
+  from {opacity: .1}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .1}
+  to {opacity: 1}
+}
