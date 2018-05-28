@@ -1,3 +1,4 @@
+// data structure holding members of the cat family
 let catFamily = [
 				{name: 'tiger', url: "img/tiger.png"}, {name: 'ocelot', url: "img/ocelot.jpg"},
 				{name: 'leopard', url: "img/leopard.jpg"}, {name: 'cheetah', url: "img/cheetah.jpg"},
@@ -14,8 +15,11 @@ let gallery = document.querySelector('.gallery');
 let img = document.createElement("img");
 let btn = document.querySelector("button");
 
+// Sets focus to textbox on page load
 window.addEventListener("load", input.focus());
+
 input.addEventListener('keydown', function (e) {
+	// listens for event where user hits the Enter key
 	if (e.keyCode === 13) {
 		if (e.target.value === "" || e.target.value === null) {
 			alert('Please enter a cat specie');
@@ -37,7 +41,7 @@ btn.addEventListener('click', function () {
 	input.value = "";
 })
 
-
+// Checks if user's input belongs to the cat family
 function findCat (arg) {
 	let present = false;
 
