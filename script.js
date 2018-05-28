@@ -6,7 +6,8 @@ let catFamily = [
 				{name: 'lynx', url: "img/lynx.jpg"}, {name: 'cougar', url: "img/cougar.jpg"},
 				{name: 'panther', url: "img/panther.jpg"}, {name: 'cat', url: "img/cat.jpg"},
 				{name: 'liger', url: "img/liger.jpg"}, {name: 'tigon', url: "img/tigon.jpg"},
-				{name: 'puma', url: "img/puma.jpg"}
+				{name: 'puma', url: "img/puma.jpg"}, {name: 'caracal', url: "img/caracal.png"},
+				{name: 'serval', url: "img/serval1.jpg"}
 				];
 
 

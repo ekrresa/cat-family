@@ -2,7 +2,9 @@ body {
 	margin: 0;
 	padding: 0 34px;
 	font-family: cursive, "Arial", sans-serif;
-	height: 97vh;
+	/*height: 97vh;*/
+    max-width: 100%;
+    max-height: 100%;
     background-image: url('img/nature.jpg');
     background-size: cover;
     background-position-x: center;
