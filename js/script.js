@@ -22,6 +22,7 @@ window.addEventListener("load", input.focus());
 input.addEventListener('keydown', function (e) {
 	// listens for event where user hits the Enter key
 	if (e.keyCode === 13) {
+		// Checks if input extbox is empty
 		if (e.target.value === "" || e.target.value === null) {
 			alert('Please enter a cat specie');
 			return;
@@ -32,6 +33,7 @@ input.addEventListener('keydown', function (e) {
 	}
 });
 btn.addEventListener('click', function () {
+	// Checks if input extbox is empty
 	if (input.value === "" || input.value === null) {
 		alert('Please enter a cat specie');
 		input.focus();
