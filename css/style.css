@@ -45,6 +45,7 @@ button {
     height: 40px;
     border-radius: 5px;
     font-weight: bold;
+    margin-bottom: 0.313em;
 }
 
 .container {
