@@ -12,9 +12,10 @@ let catFamily = [
 
 
 let input = document.querySelector('input');
-let gallery = document.querySelector('.gallery');
+let gallery = document.querySelector('.gallery');//shows a picture if input is correct
 let img = document.createElement("img");
 let btn = document.querySelector("button");
+let alert = document.querySelector(".alert");//alerts user of outcome of input
 
 // Sets focus to textbox on page load
 window.addEventListener("load", input.focus());
@@ -22,9 +23,10 @@ window.addEventListener("load", input.focus());
 input.addEventListener('keydown', function (e) {
 	// listens for event where user hits the Enter key
 	if (e.keyCode === 13) {
-		// Checks if input extbox is empty
+		// Checks if input textbox is empty
 		if (e.target.value === "" || e.target.value === null) {
-			alert('Please enter a cat specie');
+			alert.textContent = 'Please enter a cat specie';
+			alert.style.color = '#ff3d00';
 			return;
 		}
 		gallery.innerHTML = "";
@@ -33,9 +35,10 @@ input.addEventListener('keydown', function (e) {
 	}
 });
 btn.addEventListener('click', function () {
-	// Checks if input extbox is empty
+	// Checks if input textbox is empty
 	if (input.value === "" || input.value === null) {
-		alert('Please enter a cat specie');
+		alert.textContent = 'Please enter a cat specie';
+		alert.style.color = '#ff3d00';
 		input.focus();
 		return;
 	}
@@ -52,13 +55,16 @@ function findCat (arg) {
 		if(arg.toLowerCase() === cat.name) {
 			img.src = cat.url;
 			gallery.style.opacity = 1;
+			alert.textContent = `Excellent!!! ${arg} is a member of the Cat Family`;
+			alert.style.color = '#99d05a';
 			present = true;
 			break;
 		}
 	}
 	if (present === false) {
-		alert(`Awww!!! ${arg} does not belong to the Cat Family!!!
-			Please try again!`);
+		alert.textContent = `Awww!!! ${arg} does not belong to the Cat Family!!!
+			Please try again!`;
+		alert.style.color = '#ff3d00';
 		gallery.style.boxShadow = 'none';
 	}
 

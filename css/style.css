@@ -54,7 +54,7 @@ button {
 }
 
 .panel {
-	height: 14.375em;
+	height: fit-content;
     width: 20%;
     color: #222708;
     background-color: whitesmoke;
