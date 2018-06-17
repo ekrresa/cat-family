@@ -52,7 +52,7 @@ function findCat (arg) {
 	let present = false;
 
 	for (const cat of catFamily) {
-		if(arg.toLowerCase() === cat.name) {
+		if(arg.toLowerCase().trim() === cat.name) {
 			img.src = cat.url;
 			gallery.style.opacity = 1;
 			alert.textContent = `Excellent!!! ${arg} is a member of the Cat Family`;
