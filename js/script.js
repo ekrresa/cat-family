@@ -71,3 +71,13 @@ function findCat (arg) {
 	gallery.appendChild(img);
 
 }
+
+//Preload Images
+var images = new Array()
+function preload() {
+	for (i = 0; i < catFamily.length; i++) {
+		images[i] = new Image()
+		images[i].src = catFamily[i].url;
+	}
+}
+preload();
