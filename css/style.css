@@ -96,3 +96,48 @@ button {
   from {opacity: .1}
   to {opacity: 1}
 }
+
+@media only screen and (max-width: 600px) {
+    body, html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .container {
+        height: 100%;
+        flex-direction: column-reverse;
+        padding: 0.626em;
+        box-shadow: none;
+    }
+
+    .panel {
+        height: 11.625em !important;
+        width: 80% !important;
+    }
+
+    .gallery {
+        width: 100% !important;
+        margin: 1.462em !important;
+        height: 26.250em !important;
+    }
+
+    .gallery > img {
+        border-radius: 0;
+    }
+
+    .alert {
+        height: 4.313em;
+        display: flex;
+        align-items: center;
+    }
+
+    .form-input {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+}
