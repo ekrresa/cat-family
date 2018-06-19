@@ -23,25 +23,12 @@ window.addEventListener("load", input.focus());
 input.addEventListener('keydown', function (e) {
 	// listens for event where user hits the Enter key
 	if (e.keyCode === 13) {
-		// Checks if input textbox is empty
-		if (e.target.value === "" || e.target.value === null) {
-			alert.textContent = 'Please enter a cat specie';
-			alert.style.color = '#ff3d00';
-			return;
-		}
 		gallery.innerHTML = "";
 		findCat(e.target.value);
 		e.target.value = "";
 	}
 });
 btn.addEventListener('click', function () {
-	// Checks if input textbox is empty
-	if (input.value === "" || input.value === null) {
-		alert.textContent = 'Please enter a cat specie';
-		alert.style.color = '#ff3d00';
-		input.focus();
-		return;
-	}
 	gallery.innerHTML = "";
 	findCat(input.value);
 	input.value = "";
@@ -49,6 +36,13 @@ btn.addEventListener('click', function () {
 
 // Checks if user's input belongs to the cat family
 function findCat (arg) {
+	if (arg === "" || arg === null) {
+		alert.textContent = 'Please enter a cat specie';
+		alert.style.color = '#ff3d00';
+		input.focus();
+		return;
+	}
+
 	let present = false;
 
 	for (const cat of catFamily) {
@@ -62,17 +56,18 @@ function findCat (arg) {
 		}
 	}
 	if (present === false) {
-		alert.textContent = `Awww!!! ${arg} does not belong to the Cat Family!!!
+		alert.textContent = `Nah!!! ${arg} does not belong to the Cat Family!!!
 			Please try again!`;
 		alert.style.color = '#ff3d00';
 		gallery.style.boxShadow = 'none';
+		return;
 	}
 
 	gallery.appendChild(img);
 
 }
 
-//Preload Images
+//Preload Images on page load
 var images = new Array()
 function preload() {
 	for (i = 0; i < catFamily.length; i++) {
