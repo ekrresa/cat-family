@@ -4,11 +4,8 @@ body {
 	font-family: cursive, "Arial", sans-serif;
     max-width: 100%;
     max-height: 100%;
-    background-image: url('../img/nature1.jpg');
+    background: url('../img/nature1.jpg') no-repeat center center fixed;
     background-size: cover;
-    background-position-x: center;
-    background-position-y: center;
-    background-repeat: no-repeat;
 }
 
 h1 {
@@ -97,7 +94,12 @@ button {
   to {opacity: 1}
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
+    body {
+        background: url(../img/nature1.jpg) no-repeat center center fixed;
+        background-size: cover;
+    }
+
     body, html {
         margin: 0;
         padding: 0;
@@ -107,6 +109,7 @@ button {
     .container {
         height: 100%;
         flex-direction: column-reverse;
+        justify-content: flex-end;
         padding: 0.626em;
         box-shadow: none;
     }
@@ -128,8 +131,8 @@ button {
 
     .alert {
         height: 4.313em;
-        display: flex;
-        align-items: center;
+        margin-top: 0;
+        margin-bottom: 0;
     }
 
     .form-input {
@@ -138,6 +141,10 @@ button {
         justify-content: space-around;
         padding-left: 30px;
         padding-right: 30px;
+    }
+
+    .form-input > input {
+        margin-bottom: 0;
     }
 
 }
