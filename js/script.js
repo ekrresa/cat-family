@@ -50,7 +50,7 @@ function findCat (arg) {
 			img.src = cat.url;
 			gallery.style.opacity = 1;
 			alert.textContent = `Excellent!!! ${arg} is a member of the Cat Family`;
-			alert.style.color = '#99d05a';
+			alert.style.color = '#1594a2';
 			present = true;
 			break;
 		}
