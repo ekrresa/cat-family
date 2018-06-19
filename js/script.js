@@ -23,15 +23,13 @@ window.addEventListener("load", input.focus());
 input.addEventListener('keydown', function (e) {
 	// listens for event where user hits the Enter key
 	if (e.keyCode === 13) {
-		gallery.innerHTML = "";
 		findCat(e.target.value);
-		e.target.value = "";
 	}
 });
 btn.addEventListener('click', function () {
-	gallery.innerHTML = "";
+
 	findCat(input.value);
-	input.value = "";
+
 })
 
 // Checks if user's input belongs to the cat family
@@ -42,29 +40,31 @@ function findCat (arg) {
 		input.focus();
 		return;
 	}
-
+	gallery.innerHTML = "";
 	let present = false;
 
 	for (const cat of catFamily) {
 		if(arg.toLowerCase().trim() === cat.name) {
 			img.src = cat.url;
 			gallery.style.opacity = 1;
-			alert.textContent = `Excellent!!! ${arg} is a member of the Cat Family`;
+			alert.textContent = `Excellent! ${arg} is a member of the Cat Family`;
 			alert.style.color = '#1594a2';
 			present = true;
 			break;
 		}
 	}
 	if (present === false) {
-		alert.textContent = `Nah!!! ${arg} does not belong to the Cat Family!!!
-			Please try again!`;
+		alert.textContent = `Nah! ${arg} is not a member of the Cat Family!
+		Please try again!`;
 		alert.style.color = '#ff3d00';
 		gallery.style.boxShadow = 'none';
+		input.value = "";
+		input.focus();
 		return;
 	}
 
 	gallery.appendChild(img);
-
+	input.value = "";
 }
 
 //Preload Images on page load
